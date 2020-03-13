@@ -13,11 +13,11 @@ systemctl enable disable-thp.service && systemctl start disable-thp.service
 
 # logica para acessar o banco de dados e fazer os procedimentos de criação de senha
 
-# mongo 
-# use admin
-# db.createUser({ user: "root", pwd: "fba4a8683b7c7581da71f0412bdd6c4f8c3c7e83d6d55903e295bf3751e068ac", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
+mongo 
+use admin
+db.createUser({ user: "root", pwd: "fba4a8683b7c7581da71f0412bdd6c4f8c3c7e83d6d55903e295bf3751e068ac", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
 
-# mv ./lib/mongod.conf /etc/mongod.conf
+mv ./lib/mongod.conf /etc/mongod.conf
 
 # acessar mongodb e setar a senha
 # mongo -u root -p
